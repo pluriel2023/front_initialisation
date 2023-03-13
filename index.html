@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript</title>
+</head>
+<body>
+    <script>
+        //--------------- javascript -------------
+        //------ Scopes : let, const
+        // let x = 1;
+        // x = 2;
+        // if(true){
+        //     const x = 2;
+        //     console.log(x);
+        //     if(true){
+        //         const x = 3;
+        //         console.log(x)
+        //     }
+        //     console.log(x);
+        // }
+        // console.log(x);
+        //-------------------- object
+        // const obj = {
+        //     id: 15,
+        //     name: 'Hello',
+        //     country: {
+        //         name: 'UK'
+        //     }
+        // }
+        // const obj2 = obj;
+        // const obj3 = Object.assign({}, obj);
+        // obj.country.name = 'MA';
+        // obj.name = 'yassine';
+
+        //console.log(obj3);
+        // const text = '{ "id": 1, "name": "hello" }';
+
+
+        // const obj4 = JSON.parse(text);
+
+        // const text2 = JSON.stringify(obj4);
+
+        // console.log(text2);
+        //------------------------- Deep copy
+        // const myObj = {
+        //     id: 6,
+        //     country: {
+        //         id: 1,
+        //         code: {
+        //             id: 5
+        //         }
+        //     }
+        // }
+        // const text = JSON.stringify(myObj);
+        // const myObj2 = JSON.parse(text);
+        //----------- Array
+        // const arr = [1, 2, 3];
+        // const arr2 = JSON.parse(JSON.stringify(arr));
+
+        // arr.push(4);
+
+        // console.log(arr2);
+        //------------------- Destrictruation, spreed operator
+        // let obj = {
+        //     id: 2,
+        //     name: 'Hello',
+        //     country: {
+        //         id: 1,
+        //         name: 'UK',
+        //         code: 'Hello world'
+        //     },
+        //     status: true
+        // }
+        // obj = {
+        //     ...obj,
+        //     country: { 
+        //         ...obj.country,
+        //         code: 'code changed'
+        //     },
+        //     name: 'World',
+        //     status: false
+        // }
+        // console.log(obj);
+        //----------------- Array
+        // const arr = [1, 2, 3, 4];
+
+        // const arr2 = [...arr, 5, 6, 7];
+
+        // arr2[1] = 1;
+
+        // console.log(arr2);
+        //--------------------------------->
+
+        // const a = true;
+
+        // const condition = a || 'Hello world';
+
+        // const condition2 = a && 'Hello world';
+
+        // const postId = null;
+        
+        // const variable = postId ?? 1;
+
+        // console.log(variable);
+
+        //------------------------------------------->
+        const arr = [
+            {
+                id: 1,
+                name: 'Yassine',
+                country: {
+                    id: 1
+                },
+                status: false
+            },
+            {
+                id: 2,
+                name: 'Gauss',
+                country: {
+                    id: 1
+                },
+                status: false
+            },
+            {
+                id: 3,
+                name: 'Euler',
+                country: {
+                    id: 2
+                },
+                status: false
+            },
+            {
+                id: 4,
+                name: 'Hilbert',
+                country: {
+                    id: 2
+                },
+                status: false
+            }
+        ];
+        //----------- impérative / Déclarative
+        for(let k = 0; k < arr.length; k++){ // impérative
+
+        }
+        arr.forEach(el => { // Déclarative
+            el.status = true;
+        });
+        const arr2 = arr.map(el => el.id);
+
+        const arr3 = arr.filter(el => el.country.id === 2);
+        
+        const arr4 = arr.find(el => el.country.id === 2);
+
+        const arr5 = arr.findIndex(el => el.country.id === 2);
+
+        
+
+        console.log(arr5);
+    </script>
+</body>
+</html>
